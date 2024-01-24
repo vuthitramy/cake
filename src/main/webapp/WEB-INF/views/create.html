@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create form</title>
+</head>
+<body>
+<div>
+    <form th:action="@{/cake/create}" method="post" th:object="${cake}">
+
+        <select th:field="*{name}">
+            <option value="lost">lost</option>
+            <option value="pass">pass</option>
+            <option value="fat">fat</option>
+        </select>
+        <br>
+        <select th:filed="*{status}">
+            <option value="stocking">stocking</option>
+            <option value="out of stock">out of stock </option>
+        </select>
+
+        <button type="submit">Create</button>
+    </form>
+</div>
+</body>
+</html>
